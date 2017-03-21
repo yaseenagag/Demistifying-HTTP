@@ -28,6 +28,15 @@ server.post('/things', function(request, response) {
   response.status(201).send("flying car!") {
   })
 
+server.get('/search', functions(request, response) {
+  response.set('Content-type', 'text-plain')
+  response.status(200).send("This is a plain text file")
+})
+
+server.get('/things', functions(request, response) {
+  response.set('Content-type, text-plain')
+  response.status()
+}
 
 
 

@@ -33,8 +33,42 @@ describe('sandbox-server', function() {
     })
 
     it('responds with status code 400', function(done)') {
+      chai.request(app)
+      .get('/search')
+      .end(function(err, response) {
+        expect(response).to.have.status(400);
+        expect(response.text).to.eql('You didn't provide a search query term :('')
+        done();
 
+      })
+    })
+
+
+    it(responds with a status code 201, function(done)') {
+      chai.request(app)
+      .post('/things')
+      .end(function(err, response) {
+        expect(response.to.have.status(201);
+        expect(response.text).to.eql("flying car"! ) {
+        done();
+
+      )}
+    })
+
+    it(responds with a status code 200, function(done)') {
+      chai.request(app)
+      .post('somefile')
+      .end(function(err,response) {
+        expect(respond.to.have.status(200);
+        expect(response.tex).to.eql("This is a plain text file") {
+        done();
+      })
+    })
+          // body...
+        };
+      }
     }
+
 
     it()
     }
