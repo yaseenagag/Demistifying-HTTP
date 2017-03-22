@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon sandbox-server/server",
-    "test": "mocha sandbox-server/server-spec.js"
+    "test": "mocha sandbox-server/server-tests.js"
   },
   "repository": {
     "type": "git",
