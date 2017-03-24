@@ -4,8 +4,8 @@
   "description": "Build a loose clone of the Postman extension for Google Chrome",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon sandbox-server/server",
-    "test": "mocha sandbox-server/server-tests.js"
+    "start": "nodemon .",
+    "test": "mocha sandbox-server/test/server-tests.js"
   },
   "repository": {
     "type": "git",
@@ -20,11 +20,13 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "eslint": "^3.17.1",
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "morgan": "^1.8.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-http": "^3.0.0",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "pg-promise": "^5.6.4"
   }
 }
