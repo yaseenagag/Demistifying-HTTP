@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Postalicious</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="postaliciousHeader">
+        Postalicious
+      </div>
+      <div class="methodHostUri">
+        <div>Method</div>
+        <input list="methodOptions" id="method">
+        <datalist id="methodOptions">
+          <option value="GET">
+          <option value="POST">
+        </datalist>
+        <div>Host</div>
+        <input type="text" id="host"></input>
+        <div>URI</div>
+        <input type="text" id="uri"></input>
+      </div>
+      <div class="query">
+        <div>Query Parameters</div>
+        <div>
+          <input type="text" placeholder="key" class="queryKey"></input>
+          <input type="text" placeholder="value" class="queryValue"></input>
+        </div>
+        <div>
+          <input type="text" placeholder="key" class="queryKey"></input>
+          <input type="text" placeholder="value" class="queryValue"></input>
+        </div>
+        <div>
+          <input type="text" placeholder="key" class="queryKey"></input>
+          <input type="text" placeholder="value" class="queryValue"></input>
+        </div>
+      </div>
+      <div class="headers">
+        <div>Headers</div>
+        <div>
+          <input type="text" placeholder="key" class="headerKey"></input>
+          <input type="text" placeholder="value" class="headerValue"></input>
+        </div>
+        <div>
+          <input type="text" placeholder="key" class="headerKey"></input>
+          <input type="text" placeholder="value" class="headerValue"></input>
+        </div>
+        <div>
+          <input type="text" placeholder="key" class="headerKey"></input>
+          <input type="text" placeholder="value" class="headerValue"></input>
+        </div>
+      </div>
+      <div class="body">
+        <div>Body</div>
+        <textarea id="body"></textarea>
+      </div>
+      <div class="history">
+        <select id="history" onChange="remember()">
+          <option value="-1">History</option>
+          <option value="0">first</option>
+          <option value="1">second</option>
+        </select>
+      </div>
+      <div class="buttons">
+        <button class="buildButton" onClick="build()">
+          Build Request
+        </button>
+        <button class="sendButton" onClick="buildAndSend()">
+          Build & Send
+        </button>
+      </div>
+      <div class="rawRequestHeader">
+        REQUEST
+      </div>
+      <pre id="rawRequest"></pre>
+      <div class="rawResponseHeader">
+        RESPONSE
+      </div>
+      <pre id="rawResponse"></pre>
+    </div>
+
+    <script src="/javascripts/commands.js" charset="utf-8"></script>
+  </body>
+</html>
